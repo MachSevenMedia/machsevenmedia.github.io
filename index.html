@@ -13,6 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+		<script src="js/modernizr.custom.js"></script>
 		<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -23,11 +24,12 @@
 				<div id="large-header" class="large-header">
 					<canvas id="demo-canvas"></canvas>
 					<h6 class="brand">DKM <span class="thin">Labs</span></h6>
-					<a href="contact" class="newproject">Start a Project</a>
+					
 					<div class="main-title">					
 						<h1>Building the <span class="thin">impossible</span></h1>
 						<div class="lineBreak"></div>
 						<p class="subheader">We help clients bring digital products and services to market</p>
+						<button id="trigger-overlay" type="button" class="newproject">Let's Talk</button>
 					</div>
 				</div>
 				
@@ -35,9 +37,20 @@
 
 			<p class="ref">2014 &copy; DKM Labs. Built In Texas.</p>
 		</div><!-- /container -->
+		
+		<div class="overlay overlay-dkm">
+			<button type="button" class="overlay-close">Close</button>
+			<nav>
+				<ul>
+					<li><a href="mailto:contact@dkmlabs.com">contact@dkmlabs.com</a></li>
+				</ul>
+			</nav>
+		</div>
+		
 		<script src="js/jquery.js"></script>
 		<script src="js/TweenLite.min.js"></script>
 		<script src="js/EasePack.min.js"></script>
+		<script src="js/classie.js"></script>
 		<script src="js/rAF.js"></script>
 		<script src="js/script.js"></script>
 		<script src="js/randbg.js"></script>
