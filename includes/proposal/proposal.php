@@ -22,7 +22,7 @@ $delivery = $_POST['delivery'];
 $outline = $_POST['outline'];
 	
 // create email body and send it	
-$to = 'addyouremailaddress@here.com'; // Add the email where you will receive messages sent through the contact form
+$to = 'contact@dkmlabs.com'; // Add the email where you will receive messages sent through the contact form
 $email_subject = "Proposal sent by:  $name";
 $email_body = "You have received a new project proposal from a client, sent via the proposal form on your wesbite. \n\n".
 				  "Their name:\n $name \n \n ".
