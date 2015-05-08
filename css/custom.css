@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+.logo img {width: 123px;padding: 4px 0;}
+#intro {
+	padding-bottom: 60px;
+}
+@media (min-width: 768px) {
+#videohero h2, #fallback h2 {
+  font-size: 52px;
+  line-height: 60px;
+  text-transform: none;
+}
+
+}
+footer {
+	padding: 2.5% 0;
+}
+footer .copy {
+	float: none;
+	text-align: center;
+}

@@ -1,63 +1,353 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>DKM Labs</title>
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<meta name="author" content="" />
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
-		<script src="js/modernizr.custom.js"></script>
-		<!--[if IE]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-	</head>
-	<body>
-		<div class="container masthead">
-			<div class="content">
-				<div id="large-header" class="large-header">
-					<canvas id="demo-canvas"></canvas>
-					<h6 class="brand">DKM <span class="thin">Labs</span></h6>
-					
-					<div class="main-title">					
-						<h1>Building the <span class="thin">Impossible</span></h1>
-						<div class="lineBreak"></div>
-						<p class="subheader">We help clients bring digital products and services to life</p>
-						<button id="trigger-overlay" type="button" class="newproject">Let's Talk</button>
-					</div>
-				</div>
-				
-			</div>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
 
-			<p class="ref">2014 &copy; DKM Labs. Built In Texas.</p>
-		</div><!-- /container -->
-		
-		<div class="overlay overlay-dkm">
-			<button type="button" class="overlay-close">Close</button>
-			<nav>
-				<ul>
-					<li><a href="mailto:contact@dkmlabs.com">contact@dkmlabs.com</a></li>
-				</ul>
-			</nav>
-		</div>
-		
-		<script src="js/jquery/jquery-2.1.1.min.js"></script>
-		<script src="js/TweenLite.min.js"></script>
-		<script src="js/EasePack.min.js"></script>
-		<script src="js/classie.js"></script>
-		<script src="js/rAF.js"></script>
-		<script src="js/script.js"></script>
-		<script src="js/randbg.js"></script>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-          ga('create', 'UA-57371323-1', 'auto');
-          ga('send', 'pageview');
+    <!-- Page Title, (write properly for SEO) -->
+    <title>DKM - App development, design and strategy for the web, iOS and Android</title>
+
+    <!-- Meta viewport & behaviour -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Meta data -->
+    <meta name="author" content="Add Author">
+    <meta name="description" content="Add Description">
+    <meta name="keywords" content="add, site, and, page, keywords" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/ico">
+
+    <!-- Open graph meta data, (Facebook) -->
+    <meta property="og:description" content="Add a description here">
+    <meta property="og:image" content="http://addsiteurlhere.com/preview_image.png">
+    <meta property="og:site_name" content="Add Site Name">
+    <meta property="og:title" content="Add Page Title">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://addspecificpageurlhere.com/">
+
+    <!-- Meta card data, (Twitter) -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@addtwitterhandlehere">
+    <meta name="twitter:creator" content="@addtwitterhandlehere">
+    <meta name="twitter:title" content="Add Site Title Here">
+    <meta name="twitter:description" content="Add site description here">
+    <meta name="twitter:image" content="http://addsiteurlhere.com/preview_image.png">
+
+    <!-- Apple touch icons, (keep icons in root folder) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57-precomposed.png">
+
+    <!-- Theme Styles, (load in this order) -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap framework -->
+    <link href="css/animsition.min.css" rel="stylesheet" type="text/css">
+    <!-- Page transitions -->
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <!-- Element animations -->
+    <link href="css/slidebars.min.css" rel="stylesheet" type="text/css" />
+    <!-- Element animations -->
+    <link href="css/jquery.fs.wallpaper.css" rel="stylesheet" type="text/css" />
+    <!-- Wallpaper plugin styles (video hero) -->
+    <link href="css/iconfont.css" rel="stylesheet" type="text/css">
+    <!-- Icon fonts -->
+    <link href="css/flexslider.css" rel="stylesheet" type="text/css">
+    <!-- Flexslider styles -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Core theme styles -->
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="index-video" class="lightnav animsition">
+
+    <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="img/global/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="index.html" class="animsition-link" title="Start">Start</a></li>
+            <li><a href="company.html" class="animsition-link" title="Company">Company</a></li>
+            <li><a href="services.html" class="animsition-link" title="Services">Services</a></li>
+            <li><a href="careers.html" class="animsition-link" title="Careers">Careers</a></li>
+            <li><a href="work.html" class="animsition-link" title="Work">Work</a></li>
+            <li><a href="proposal.html" class="animsition-link" title="Start a Project">Start a Project</a></li>
+            <li><a href="contact.html" class="animsition-link" title="Contact Us">Contact Us</a></li>
+        </ul>
+        </ul>
+    </div>
+
+    <!-- ============================ Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="index.html" title="DKM" class="animsition-link"><img src="img/global/logo.svg" alt="DKM logo"></a>
+                    </div>
+                    <!-- // Nav logo -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">Menu</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="learn More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ END Header & Logo bar =========================== -->
+
+        <!-- ============================ Video Hero =========================== -->
+
+        <section id="videohero" class="scrollme">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                                <h2>We build digital products that <span>empower</span> businesses to succeed.</h2>
+                            </div>
+                        </div>
+                        <!-- // .center-me .text-center -->
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <!-- // .row -->
+                <div class="videofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Specify background image for graceful fallback for mobiles and tablets -->
+        <section id="fallback" class="cover element-img" style="background-image: url('video/mobile-fallback.jpg');">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                                <h2>We build digital products that <span>empower</span> businesses to succeed.</h2>
+                            </div>
+                        </div>
+                        <!-- // .center-me .text-center -->
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <!-- // .row -->
+                <div class="videofade beige-dk"></div>
+            </div>
+        </section>
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Video Hero =========================== -->
+
+        <!-- ============================ Intro =========================== -->
+
+        <section id="intro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 opening-statement">
+                        <div class="col-md-4">
+                            <h3>Digital services that <span>engage</span> users and <span>empower</span> businesses.</h3>
+                        </div>
+                        <div class="col-md-8">
+                            <p>From mobile apps and websites to enterprise-grade systems, we apply our expertise across platforms and screens. We offer a full range of digital creative services for brands, startups, corporations and foundations looking to improve their digital outlook.</p>
+                        </div>
+                        <div class="clearfix"></div>
+             
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================ END Intro =========================== -->
+
+        <!-- ============================ Figures =========================== -->
+
+        <section id="figures" class="beige-dk">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-sm-6 col-md-3 col-md-3 col-lg-3 figure-item wow fadeInUp" data-wow-delay="0.2s">
+                        <i class="icon-basic-lightbulb"></i>
+                        <h4 class="white-text">Digital Strategy</h4>
+                        <p>A well thought out project plan is fundamental to a projects success.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-md-3 col-lg-3 figure-item wow fadeInUp" data-wow-delay="0.4s">
+                        <i class="icon-basic-pencil-ruler"></i>
+                        <h4 class="white-text">UX Design</h4>
+                        <p>Beautifully designed interfaces and thoughtful user experiences.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-md-3 col-lg-3 figure-item wow fadeInUp" data-wow-delay="0.6s">
+                        <i class="icon-basic-server2"></i>
+                        <h4 class="white-text">Technical Development</h4>
+                        <p>Built with a multi-faceted approach using open source technologies.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-md-3 col-lg-3 figure-item wow fadeInUp" data-wow-delay="0.8s">
+                        <i class="icon-basic-paperplane"></i>
+                        <h4 class="white-text">Product Launch</h4>
+                        <p>Our infrastructure design, passed into your hands.</p>
+                    </div>
+                </div>
+                <!-- CALL TO ACTION -->
+                <div class="figures-footer text-center">
+                    <h6><a href="company.html" class="strong animsition-link">Read more about our services »</a></h6>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================ END Figures =========================== -->
+
+
+        <!-- ============================ Statement =========================== -->
+
+        <section id="statement">
+            <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+                <div class="row">
+                    <p><i class="icon-basic-settings"></i> We build usable interfaces and products for businesses that want better quality.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================ END Statement =========================== -->
+
+        <!-- ============================ Full-width image =========================== -->
+
+        <section id="fullwidth-img">
+            <div class="container-fluid element-img wow fadeInUp" data-wow-delay="0.5s" style="background-image:url(img/home/19.jpg)"></div>
+        </section>
+
+        <!-- ============================ END Full-width image =========================== -->
+
+
+
+		<section id="hire-us" class="beige-dk">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-offset-2">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h4 class="headspc">Ready to begin your project?</h4>
+                                <p class="copyspc">Have an idea you want to show the world? Let us help you build it!</p>
+                            </div>
+                            <!-- Go to proposal.html link -->
+                            <div class="col-md-4">              
+                                <a href="proposal.html" class="custom-button animsition-link" title="Proposal">Start Your Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================ Footer =========================== -->
+
+        <footer>
+            <div class="container">
+                
+                <div class="footer_top">
+                    <div class="copy">
+                        <p>
+                            &copy; 2014<script>new Date().getFullYear()>2014&&document.write("-"+new Date().getFullYear());</script>, DKM. All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- ============================ END Footer =========================== -->
+
+        <!-- //////////////////////////////////////////////////////////// -->
+        <!-- Load our scripts -->
+        
+        <!-- Resizable 'on-demand' full-height hero -->
+        <script type="text/javascript">
+            
+            var resizeHero = function () {
+                var hero = $(".cover,.heightblock"),
+                    window1 = $(window);
+                hero.css({
+                    "height": window1.height()
+                });
+            };
+            
+            resizeHero();
+            
+            $(window).resize(function () {
+                resizeHero();
+            });
         </script>
-	</body>
+        <script src="js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load first -->
+        <script src="js/jquery.fs.wallpaper.js"></script><!-- Background video plugin for hero section -->
+        <script src="js/scripts.js"></script><!-- Theme scripts -->
+
+        <!-- Initialize background video in hero section, (above the fold) -->
+        <script>
+            $(document).ready(function() {
+                $("#videohero").wallpaper({
+                    source: {
+                        mp4:    "video/hero.mp4",
+                        ogg:    "video/hero.ogv",
+                        webm:   "video/hero.webm"
+                    }
+                });
+            });
+        </script>
+
+    </div>
+    <!-- ============================ END #sb-site Main Page Wrapper =========================== -->
+
+</body>
 </html>
