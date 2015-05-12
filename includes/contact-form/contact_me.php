@@ -1,4 +1,5 @@
 <?php
+require '../phpmailer/Send_Mail.php';
 // check if fields passed are empty
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
@@ -16,11 +17,12 @@ $message = $_POST['message'];
 // create email body and send it	
 $to = 'contact@dkmlabs.com'; // Add the email where you will receive messages sent through the contact form
 $email_subject = "Contact form submitted by:  $name";
-$email_body = "You have received a new message from your website. \n\n".
-				  "Start message:\n \nName: $name \n ".
-				  "Email: $email_address\n Message \n $message";
-$headers = "From: $email_address\n";
-$headers .= "Reply-To: $email_address";	
-mail($to,$email_subject,$email_body,$headers);
-return true;			
+$email_body = "<p>You have received a new message from your website.</p>\r\n".
+				  "Their Name: $name<br/>\r\n ".
+				  "Email Address: $email_address<br/>\r\n".
+                  "Message: $message<br/>\r\n";
+if(Send_Mail($to,$email_subject,$email_body))
+    return true;
+else
+    return false;
 ?>

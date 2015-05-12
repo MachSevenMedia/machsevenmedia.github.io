@@ -1,4 +1,5 @@
 <?php
+require '../phpmailer/Send_Mail.php';
 // check if fields passed are empty
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
@@ -24,16 +25,16 @@ $outline = $_POST['outline'];
 // create email body and send it	
 $to = 'contact@dkmlabs.com'; // Add the email where you will receive messages sent through the contact form
 $email_subject = "Proposal sent by:  $name";
-$email_body = "You have received a new project proposal from a client, sent via the proposal form on your wesbite. \n\n".
-				  "Their name:\n $name \n \n ".
-				  "Email address:\n $email_address \n \n".
-				  "Telephone number:\n $telephone \n \n".
-				  "Start message:\n \n$type \n ".
-				  "Start message:\n \n$budget \n ".
-				  "Start message:\n \n$delivery \n ".
-				  "Start message:\n \n$outline \n ".
-$headers = "From: $email_address\n";
-$headers .= "Reply-To: $email_address";	
-mail($to,$email_subject,$email_body,$headers);
-return true;			
+$email_body = "<p>You have received a new project proposal from a client, sent via the proposal form on your wesbite.</p>".
+				  "Their Name: $name<br/>\r\n".
+				  "Email Address: $email_address<br/>\r\n".
+				  "Telephone Number: $telephone<br/>\r\n".
+				  "Project Type: $type<br/>\r\n".
+				  "Project Budget: $budget<br/>\r\n".
+				  "Project Delivery: $delivery<br/>\r\n".
+				  "Project Outline: $outline<br/>\r\n";
+if(Send_Mail($to,$email_subject,$email_body))
+    return true;
+else
+    return false;
 ?>

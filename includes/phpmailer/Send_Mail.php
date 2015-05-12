@@ -6,9 +6,10 @@ function Send_Mail($to,$subject,$body)
     require 'class.smtp.php';
     $from = "contact@dkmlabs.com";
     $to='contact@dkmlabs.com';
-    $email_subject='ses test';
-    $email_body="Test test test\r\n";
+    $email_subject=$subject;
+    $email_body=$body."\r\n";
     $mail = new PHPMailer();
+    $mail->isHTML(true); // Enable HTML mailing
     $mail->IsSMTP(true); // SMTP
     $mail->SMTPAuth   = true;  // SMTP authentication
     $mail->SMTPSecure = "tls";
