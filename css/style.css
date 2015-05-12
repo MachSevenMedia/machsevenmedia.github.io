@@ -2865,7 +2865,7 @@ ul.filters li p:hover {
 	border: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	padding: 27px;
+	padding: 0px 27px;
 	font-family: 'Georgia', serif;
 	font-style: italic;
 	color: #111;
