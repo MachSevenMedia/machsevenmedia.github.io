@@ -187,3 +187,29 @@ $(document).ready(function($) {
 		}
 	});
 });
+
+// Mouse icon animation
+        if(jQuery('.mouse-icon').length) {
+            var icons = jQuery('.mouse-icon');
+            
+            setTimeout(function() {
+                mouse_icon_animation()
+            }, 1000);
+            
+            function mouse_icon_animation() {
+                icons.addClass('animate');
+                
+                setTimeout(mouse_icon_remove, 160);
+                setTimeout(mouse_icon_add, 320);
+                setTimeout(mouse_icon_remove, 480);
+                setTimeout(mouse_icon_animation, 2500);
+            }   
+            
+            function mouse_icon_add() {
+                icons.addClass('animate');
+            }
+            
+            function mouse_icon_remove() {
+                icons.removeClass('animate');
+            }
+        }
