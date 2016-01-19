@@ -13,6 +13,7 @@ $(function() {
      submitSuccess: function($form, event) {
       event.preventDefault(); // prevent default submit behaviour
        // get values from FORM
+       var corp = "Contact";
        var name = $("input#name").val();  
        var email = $("input#email").val(); 
        var message = $("textarea#message").val();
@@ -20,11 +21,15 @@ $(function() {
            // Check for white space in name for Success/Fail message
         if (firstName.indexOf(' ') >= 0) {
 	   firstName = name.split(' ').slice(0, -1).join(' ');
-         }        
+         }
+	// Convert form data variables to JSON array for AWS API Gateway        
+	var formdata = {email: email,corp: corp,name: name,message: message};
+	formdata = JSON.stringify(formdata);
 	 $.ajax({
-                url: "includes/contact-form/contact_me.php",
+                url: "https://5fb4ye4svg.execute-api.us-east-1.amazonaws.com/prod/ContactForm/",
+		dataType: 'json',
             	type: "POST",
-            	data: {name: name, email: email, message: message},
+		data: formdata,
             	cache: false,
             	success: function() {  
             	// Success message

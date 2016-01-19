@@ -12,6 +12,7 @@ $(function() {
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
+	    var corp = "Proposal";
             var name = $("input#name").val();
             var email = $("input#email").val();
             var telephone = $("input#telephone").val();
@@ -24,18 +25,23 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
+  	    // Convert form data variables to JSON array for AWS API Gateway
+	    var formdata = {
+		email: email,
+		corp: corp,
+		name: name,
+		telephone: telephone,
+		type: type,
+		budget: budget,
+		delivery: delivery,
+		outline: outline
+	    };
+	    formdata = JSON.stringify(formdata);
             $.ajax({
-                url: "includes/proposal/proposal.php",
+                url: "https://5fb4ye4svg.execute-api.us-east-1.amazonaws.com/prod/ContactForm/",
+		dataType: 'json',
                 type: "POST",
-                data: {
-                    name: name,
-                    email: email,
-                    telephone: telephone,
-                    type: type,
-                    budget: budget,
-                    delivery: delivery,
-                    outline: outline
-                },
+                data: formdata,
                 cache: false,
                 success: function() {
                     // Success message
