@@ -2,7 +2,7 @@
   "deploy": {
     "type": "S3",
     "target": {
-      "master": "www.dkmlabs.com"
+      "master": "dkmlabs.com"
     }
   }
 }
