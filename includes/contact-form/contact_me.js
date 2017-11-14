@@ -49,7 +49,7 @@ $(function() {
  		 $('#success').html("<div class='alert alert-danger'>");
             	$('#success > .alert-danger').html("")
             	 .append( "</button>");
-            	$('#success > .alert-danger').append("WHOA! Sorry "+firstName+", it seems my email system is having a moment... Please email me directly to <a href='mailto:contact@dkmlabs.com'>contact@dkmlabs.com</a>.");
+            	$('#success > .alert-danger').append("WHOA! Sorry "+firstName+", it seems my email system is having a moment... Please email me directly to <a href='mailto:contact@labs.com'>contact@labs.com</a>.");
  	        $('#success > .alert-danger').append('</div>');
  		//clear all fields
  		$('#contactForm').trigger("reset");
