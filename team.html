@@ -5,39 +5,41 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 <!--<![endif]-->
+
 <head>
     <meta charset="utf-8">
 
     <!-- Page Title, (write properly for SEO) -->
-    <title>Team | DKM Labs</title>
+    <title>Team | Mach Seven Media - WEBSITE DESIGN, BRAND STRATEGY & DIGITAL MARKETING With Stunning Results</title>
 
     <!-- Meta viewport & behaviour -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Meta data -->
-    <meta name="author" content="DKM Labs">
-    <meta name="description" content="DKM Labs - App development, design and strategy for the web, iOS and Android. We build digital products that empower businesses to succeed.">
-    <meta name="keywords" content="digital products, mobile apps, responsive websites, digital agency, houston, iOS, android, drupal, node.js, angularjs, mysql, mongodb" />
+    <meta name="author" content="Mach Seven Media">
+    <meta name="description" content="Mach Seven Media - Digital Experiences Strategically Engineered to Perform">
+    <meta name="keywords" content="digital products, seo, digital marketing, chat bots, artificial intelligence, AI, mobile apps, responsive websites, digital agency, houston, iOS, android, drupal, node.js, angularjs, mysql, mongodb"
+    />
 
     <!-- Favicon, (keep icon in root folder) -->
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/ico">
 
     <!-- Open graph meta data, (Facebook) -->
     <meta property="og:description" content="We build digital products that empower businesses to succeed.">
-    <meta property="og:image" content="http://dkmlabs.com/img/home/19.jpg">
-    <meta property="og:site_name" content="DKM Labs">
-    <meta property="og:title" content="DKM Labs - App development, design and strategy for the web, iOS and Android">
+    <meta property="og:image" content="img/home/18.jpg">
+    <meta property="og:site_name" content="Mach Seven Media">
+    <meta property="og:title" content="Mach Seven Media - Digital Experiences Strategically Engineered to Perform">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://www.dkmlabs.com">
+    <meta property="og:url" content="http://www.machsevenmedia.com">
 
     <!-- Meta card data, (Twitter) -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@dkmlabs">
-    <meta name="twitter:creator" content="@dkmlabs">
-    <meta name="twitter:title" content="DKM Labs - App development, design and strategy for the web, iOS and Android">
+    <meta name="twitter:site" content="@mach7med">
+    <meta name="twitter:creator" content="@mach7med">
+    <meta name="twitter:title" content="Mach Seven Media - Digital Experiences Strategically Engineered to Perform">
     <meta name="twitter:description" content="We build digital products that empower businesses to succeed.">
-    <meta name="twitter:image" content="http://dkmlabs.com/img/global/logo.svg">
+    <meta name="twitter:image" content="img/global/mach7logo.png">
 
     <!-- Apple touch icons, (keep icons in root folder) -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
@@ -53,9 +55,13 @@
     <link href="css/animate.css" rel="stylesheet" type="text/css">
     <!-- Element animations -->
     <link href="css/slidebars.min.css" rel="stylesheet" type="text/css" />
-    <!-- Off-canvas navigation -->
+    <!-- Element animations -->
+    <link href="css/jquery.fs.wallpaper.css" rel="stylesheet" type="text/css" />
+    <!-- Wallpaper plugin styles (video hero) -->
     <link href="css/iconfont.css" rel="stylesheet" type="text/css">
     <!-- Icon fonts -->
+    <link href="css/flexslider.css" rel="stylesheet" type="text/css">
+    <!-- Flexslider styles -->
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <!-- Core theme styles -->
     <link href="css/custom.css" rel="stylesheet" type="text/css">
@@ -125,7 +131,7 @@
                 <div class="container">
                     <!-- Nav logo -->
                     <div class="logo">
-                        <a href="index.html" title="Logo" class="animsition-link"><img src="img/global/logo.svg" alt="Logo"></a>
+                        <a href="index.html" title="Logo" class="animsition-link"><img src="img/global/mach7logo.png" alt="Logo"></a>
                     </div>
                     <!-- // Nav logo -->
                 </div>
@@ -241,14 +247,15 @@
         <!-- ============================ END Hire us =========================== -->
 
         <!-- ============================ Footer =========================== -->
-
+        
         <footer>
             <div class="container">
-                
+        
                 <div class="footer_top">
                     <div class="copy">
                         <p>
-                            &copy; 2014<script>new Date().getFullYear()>2014&&document.write("-"+new Date().getFullYear());</script>, DKM. All Rights Reserved.
+                            &copy;
+                            <script>document.write(new Date().getFullYear());</script>, Mach Seven Media. All Rights Reserved.
                         </p>
                     </div>
                     <div class="clearfix"> </div>
@@ -257,24 +264,59 @@
         </footer>
         
         <!-- ============================ END Footer =========================== -->
-
+        
         <!-- //////////////////////////////////////////////////////////// -->
         <!-- Load our scripts -->
+        
+        <!-- Resizable 'on-demand' full-height hero -->
+        <script type="text/javascript">
 
-        <script src="js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load first -->
-        <script src="js/scripts.js"></script><!-- Theme scripts -->
+            var resizeHero = function () {
+                var hero = $(".cover,.heightblock"),
+                    window1 = $(window);
+                hero.css({
+                    "height": window1.height()
+                });
+            };
 
-    </div>
-    <!-- ============================ END #sb-site Main Page Wrapper =========================== -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            resizeHero();
 
-  ga('create', 'UA-57371323-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-</body>
-</html>
+            $(window).resize(function () {
+                resizeHero();
+            });
+        </script>
+        <script src="js/plugins.min.js"></script>
+        <!-- Bootstrap core and concatenated plugins always load first -->
+        <script src="js/jquery.fs.wallpaper.js"></script>
+        <!-- Background video plugin for hero section -->
+        <script src="js/scripts.js"></script>
+        <!-- Theme scripts -->
+        
+        <!-- Initialize background video in hero section, (above the fold) -->
+        <script>
+            $(document).ready(function () {
+                $("#videohero").wallpaper({
+                    source: {
+                        mp4: "video/Home-page-loop.mp4",
+                        // ogg:    "video/hero.ogv",
+                        // webm:   "video/hero.webm"
+                    }
+                });
+            });
+        </script>
+        
+        </div>
+        <!-- ============================ END #sb-site Main Page Wrapper =========================== -->
+        <!-- <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+          ga('create', 'UA-57371323-1', 'auto');
+          ga('send', 'pageview');
+        
+        </script> -->
+        </body>
+        
+        </html>
